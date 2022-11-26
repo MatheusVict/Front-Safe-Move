@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #d6afaf;
+}
+
+.name {
+  margin-right: 15px;
+}
+
+.email {
+  margin-right: 15px;
+}
+
+.btn {
+  max-width: 150px;
+  background-color: red;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .4s;
+  color: #FFF;
+}
+
+.btn:hover {
+  background-color: #FFF;
+  color: red;
+}

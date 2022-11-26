@@ -10,10 +10,10 @@ export const NavBar: React.FC = () => {
         </div>
         <ul className={styles.linkItems}>
             <li>
-                Vamo
+                <a href='/home'>Home</a>
             </li>
             <li>
-                Vamo
+                <a href='*'>Perfil</a>
             </li>
         </ul>
     </nav>

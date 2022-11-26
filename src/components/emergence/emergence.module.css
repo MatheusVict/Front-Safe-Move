@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 30pt;
+}
+
+.button {
+  background-color: rgb(218, 23, 23);
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  margin-left: 50px;
+  color: #FFF;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: rgb(192, 33, 33);
+}
+
+.img {
+  max-width: 150px;
+  margin-left: 35px;
+  cursor: pointer;
+}
