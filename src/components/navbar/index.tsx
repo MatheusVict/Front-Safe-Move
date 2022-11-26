@@ -2,6 +2,8 @@ import React from 'react'
 import styles from './navbar.module.css';
 
 export const NavBar: React.FC = () => {
+  const token = localStorage.getItem('token');
+
   return (
     <nav className={styles.navbar}>
         <div className={styles.logo}>
@@ -9,12 +11,16 @@ export const NavBar: React.FC = () => {
             <h1>Safe Move</h1>
         </div>
         <ul className={styles.linkItems}>
+            {token && (
+            <>
             <li>
-                <a href='/home'>Home</a>
+              <a href='/home'>Home</a>
             </li>
             <li>
                 <a href='*'>Perfil</a>
             </li>
+            </>
+            )}
         </ul>
     </nav>
   )

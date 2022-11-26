@@ -5,6 +5,7 @@ import { Cad } from '../../pages/cadastro'
 import { Guards } from '../../pages/guards'
 import { Home } from '../../pages/Home'
 import { Login } from '../../pages/login'
+import { Profile } from '../../pages/profile'
 
 export const RoutesMain = () => {
   return (
@@ -15,6 +16,7 @@ export const RoutesMain = () => {
         <Route path='/cadastro' element={<Cad />} />
         <Route path='/Home' element={<Home />} />
         <Route path='/guards' element={<Guards />} />
+        <Route path='/profile' element={<Profile />} />
       </Routes>
     </Router>
   )

@@ -1,3 +1,4 @@
+import { errorAlert } from "../../components/alerts/ErroAlert";
 import { emailProps, userAuth, userService } from "../../interfaces/userServiceProps";
 import { api } from "../API/apiConfig";
 import { ErrorExeption } from "../API/ErrorExecpition";
@@ -53,9 +54,25 @@ const getAll = async (): Promise<userService[]> => {
   }
 }
 
+const getUser = async () => {
+  try {
+    const token = localStorage.getItem('token')
+    const { data } = await api().get<userService>('/users/auth', {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
+
+    return data;
+  } catch (error) {
+    errorAlert()
+  }
+}
+
 export const services = {
   getAll,
   login,
   register,
   sendMail,
+  getUser,
 }

@@ -19,33 +19,32 @@ export const Login = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
-          Safe Move
+        Login
         <div className={styles.line}></div>
       </div>
       <div className={styles.login_box}>
         <div className={styles.container}>
           <section className={styles.content}>
-          <div className={styles.item} id={styles.content_1}>              
-            <h2>Login</h2>
-            <form onSubmit={handleLog}>
-            <div className={styles.user_box}>
-              <input type="text" onChange={(e: any) => setEmail(e.target.value)}/>
-              <label>Usuário</label>
-            </div>
-          <div className={styles.user_box}>
-          <input type="password" onChange={(e: any) => setPass(e.target.value)}/>
-          <label>Senha</label>
+            <div className={styles.item} id={styles.content_1}>              
+              <form onSubmit={handleLog}>
+                <div className={styles.user_box}>
+                  <input type="text" onChange={(e: any) => setEmail(e.target.value)}/>
+                  <label>Usuário</label>
+                </div>
+                <div className={styles.user_box}>
+                  <input type="password" onChange={(e: any) => setPass(e.target.value)}/>
+                  <label>Senha</label>
+                </div>
+                <div className={styles.Acesso}>
+                  <button type='submit'>Acessar</button>
+                </div>
+                <div className={styles.Acesso2}>
+                  <Link to='/cadastro'>Cadastro</Link>
+                </div>
+              </form>
+            </div>                                         
+          </section>
         </div>
-        <div className={styles.Acesso}>
-        <button type='submit'>Acessar</button>
-      </div>
-      <div className={styles.Acesso2}>
-      <Link to='/cadastro'>Cadastrar</Link>
-    </div>
-  </form>
-  </div>                                         
-  </section>
-  </div>
       </div>  
     </div> 
   )

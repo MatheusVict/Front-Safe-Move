@@ -13,8 +13,8 @@ interface GuardProps {
 export const CardGuard: React.FC<GuardProps> = ({ email, guardianName }) => {
 
   const handleSend = useCallback(async () => {
-    await services.sendMail({to: email, message: 'Estou perto', subject: 'Fique de oho'}).then(() => {
-      successAlert();
+    await services.sendMail({to: email, message: 'EStou chegando', subject: 'Aqui está minha localização'}).then(() => {
+      successAlert('Seu guardião foi informado com sucesso');
     }).catch((error) => errorAlert())
   }, [email])
 

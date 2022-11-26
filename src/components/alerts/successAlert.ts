@@ -1,10 +1,10 @@
 import Swal from "sweetalert2"
 
-export const successAlert = () => {
+export const successAlert = (message: string) => {
   Swal.fire({
     position: 'top-end',
     icon: 'success',
-    title: 'Seu gurdião foi informado',
+    title: `${message}`,
     showConfirmButton: false,
     timer: 1500
   })
